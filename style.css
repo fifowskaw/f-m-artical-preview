@@ -1,0 +1,278 @@
+:root {
+    --color-background: hsl(210, 46%, 95%);
+    --color-main-bg: white;
+
+    --color-dark-grey: hsl(217, 19%, 35%);
+    --color-grey: hsl(214, 17%, 51%);
+    --color-light-grey: hsl(212, 23%, 69%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+
+    background-color: var(--color-background);
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main {
+    background-color: var(--color-main-bg);
+    border-radius: 10px;
+    width: 700px;
+    height: 300px;
+
+    display: flex;
+    box-shadow: 5px 15px 90px var(--color-light-grey);
+}
+
+.main-photo {
+    height: 100%;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px 0 0 10px;
+}
+.main-photo-img {
+    height: 100%;
+    width: 400px;
+}
+.main-description {
+    position: relative;
+    padding: 30px;
+    height: 100%;
+    width: 400px;
+}
+h2 {
+    color: var(--color-dark-grey);
+    font-size: 21px;
+}
+.main-paragraf {
+    margin-top: 15px;
+    color: var(--color-grey);
+    font-size: 12px;
+}
+.person {
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+}
+.person-photo {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+}
+.person-description {
+    margin-left: 20px;
+}
+h3 {
+    margin-top: 5px;
+    color: var(--color-dark-grey);
+    font-size: 16px;
+}
+.person-date {
+    color: var(--color-light-grey);
+    font-size: 12px;
+}
+
+.share {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+
+    border-radius: 100%;
+    border: none;
+    background-color: var(--color-background);
+
+    height: 40px;
+    width: 40px;
+
+    cursor: pointer;
+}
+.share:hover {
+    background-color: var(--color-dark-grey);
+}
+.share:hover .share_img {
+    fill: var(--color-main-bg);
+}
+
+.checked {
+    background-color: var(--color-dark-grey);
+    fill: var(--color-main-bg);
+}
+
+.contact {
+    position: absolute;
+
+    background-color: var(--color-dark-grey);
+    box-shadow: 5px 10px 50px var(--color-light-grey);
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+
+    right: -45px;
+    bottom: 110px;
+
+    padding: 15px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.triangle {
+    position: absolute;
+    bottom: -12px;
+    left: 92px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+
+    border-top: 12px solid var(--color-dark-grey);
+}
+.share-info {
+    color: var(--color-light-grey);
+    letter-spacing: 2.5px;
+    font-size: 14px;
+}
+
+.facebook-logo,
+.twitter-logo,
+.pinterest-logo {
+    cursor: pointer;
+}
+
+.attribution {
+    color: var(--color-dark-grey);
+    position: absolute;
+    bottom: 0;
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    text-decoration: none;
+    color: var(--color-light-grey);
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        width: 300px;
+        max-width: 300px;
+        height: 590px;
+        max-height: 590px;
+
+        flex-wrap: wrap;
+    }
+    .main-photo {
+        height: 250px;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+    .main-photo-img {
+        height: 250px;
+        width: 100%;
+    }
+    .main-description {
+        position: relative;
+        padding: 30px;
+        height: 340px;
+        width: 100%;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .main-paragraf {
+        font-size: 14px;
+    }
+    .person {
+        position: relative;
+        margin-top: 30px;
+        width: 100%;
+        height: 50px;
+
+        display: flex;
+    }
+    h3 {
+        font-size: 13px;
+    }
+    .person-photo {
+        border-radius: 100%;
+        width: 45px;
+        height: 45px;
+    }
+
+    .share {
+        z-index: 10;
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+
+        height: 35px;
+        width: 35px;
+    }
+    .checked {
+        background-color: var(--color-grey);
+    }
+    .share:hover {
+        background-color: var(--color-grey);
+    }
+
+    .contact {
+        left: 0;
+        bottom: 0;
+
+        background-color: var(--color-dark-grey);
+        box-shadow: 0px 0px var(--color-light-grey);
+        border-radius: 0 0 10px 10px;
+        width: 100%;
+        height: 75px;
+        padding: 15px;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .triangle {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: 0px solid transparent;
+        border-right: 0px solid transparent;
+
+        border-top: 0px solid var(--color-dark-grey);
+    }
+    .share-info {
+        color: var(--color-light-grey);
+        letter-spacing: 3px;
+        font-size: 17px;
+    }
+    .facebook-logo,
+    .twitter-logo,
+    .pinterest-logo {
+        margin-left: 20px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .hidden {
+        display: none;
+    }
+}
